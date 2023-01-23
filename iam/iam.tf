@@ -53,31 +53,3 @@ resource "aws_iam_group_membership" "dev" {
     aws_iam_group.dev
   ]
 }
-
-resource "aws_iam_policy" "code_commmit" {
-
-}
-
-
-
-
-//resource "aws_iam_user_policy" "code_commit" {
-//  name = "CodeCommitFullAccess"
-//  user = aws_iam_user.user.name
-//
-//  policy = jsonencode({
-//    "Version": "2012-10-17",
-//    "Statement": [
-//      {
-//        "Effect": "Allow",
-//        "Action": [
-//          "codecommit:*"],
-//        "Resource": "*"
-//      }
-//    ]
-//  })
-//}
-//
-//
-//
-

@@ -1,4 +1,4 @@
-# lab-code-pipeline
+# IAM
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -25,7 +25,7 @@ No modules.
 | [aws_iam_access_key.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key) | resource |
 | [aws_iam_group.dev](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
 | [aws_iam_group_membership.dev](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_membership) | resource |
-| [aws_iam_policy.code_commmit](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_iam_policy.code_commmit_full](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_iam_user.user](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
 | [aws_iam_user_login_profile.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_login_profile) | resource |
 
@@ -40,5 +40,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_code_commit_full_policy"></a> [code\_commit\_full\_policy](#output\_code\_commit\_full\_policy) | n/a |
 | <a name="output_user_profiles"></a> [user\_profiles](#output\_user\_profiles) | The user profiles (arn, password, unique\_id) |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
