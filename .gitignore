@@ -1,5 +1,5 @@
 .idea
-iam/.terraform.lock.hcl
-iam/.terraform
-iam/terraform.tfstate
-terraform.tfstate.backup
+*/.terraform.lock.hcl
+*/.terraform
+*/terraform.tfstate
+*/terraform.tfstate.backup
