@@ -1,2 +1,2 @@
 # Lab code pipeline
-Build code pipeline with terraform
+Build code pipeline using terraform in AWS 
