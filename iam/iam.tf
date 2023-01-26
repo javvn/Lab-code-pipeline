@@ -11,7 +11,8 @@ resource "aws_iam_group" "dev" {
 resource "aws_iam_user" "user" {
   count = length(var.users)
 
-  name = var.users[count.index].Name
+  name          = var.users[count.index].Name
+  force_destroy = true
 
   tags = merge(local.user_tags, var.users[count.index])
 }
@@ -35,7 +36,7 @@ resource "aws_iam_user_login_profile" "this" {
   count = length(var.users)
 
   user                    = var.users[count.index].Name
-  password_reset_required = false
+  password_reset_required = true
 
   depends_on = [aws_iam_user.user]
 }
