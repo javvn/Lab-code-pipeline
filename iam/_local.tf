@@ -23,5 +23,5 @@ locals {
     policy    = jsondecode(aws_iam_policy.code_commit_full.policy)
   }
 
-
+  repo_state = data.terraform_remote_state.repository.outputs.repo
 }
