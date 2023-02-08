@@ -67,7 +67,6 @@ locals {
     monitoring             = false
     vpc_security_group_ids = [module.sg.security_group_id]
     subnet_id              = module.vpc.public_subnets[0]
-    user_data              = file("${path.module}/userdata.sh")
+    user_data              = file("${path.module}/scripts/userdata.sh")
   }
-
 }
