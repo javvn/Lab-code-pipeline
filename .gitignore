@@ -1,7 +1,9 @@
 .idea
-*/.terraform.lock.hcl
-*/.terraform
-*/terraform.tfstate
-*/terraform.tfstate.backup
-*/*.backup
-*/*.tfvars
+.run
+.terraform.lock.hcl
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+*.backup
+*.tfvars
+.DS_Store
