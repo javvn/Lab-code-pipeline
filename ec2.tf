@@ -39,3 +39,13 @@ resource "aws_eip" "ec2" {
     module.ec2
   ]
 }
+
+resource "null_resource" "ec2" {
+  triggers = {
+    ec2_public_ip = aws_eip.ec2.public_ip
+  }
+
+  provisioner "local-exec" {
+    command = "if [ -z \"$(ssh-keygen -F ${aws_eip.ec2.public_ip})\" ]; then ssh-keyscan -H ${aws_eip.ec2.public_ip} >> ~/.ssh/known_hosts fi"
+  }
+}

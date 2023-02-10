@@ -7,6 +7,7 @@ sudo yum install ruby -y
 sudo amazon-linux-extras install docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
+sudo chkconfig docker on
 
 # shellcheck disable=SC2164
 cd /home/ec2-user
