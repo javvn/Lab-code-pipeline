@@ -26,7 +26,7 @@ if [ -z $ACTION ]; then
           done
 
           echo "started instance !"
-          terraform apply -target module.ec2 -target aws_eip.ec2 --auto-approve
+          terraform apply -target module.ec2 -target aws_eip.ec2 -target null_resource.ec2 --auto-approve
         fi
 
     elif [ $ACTION = "stop" ]; then
@@ -53,9 +53,3 @@ if [ -z $ACTION ]; then
       echo "please input argument 'start' or 'stop'"
     fi
 fi
-
-
-
-
-
-#EC2_INSTANCE_PUBLIC_IP=$(terraform output -json | jq .ec2.value.public_id)
