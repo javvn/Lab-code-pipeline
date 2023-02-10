@@ -46,6 +46,6 @@ resource "null_resource" "ec2" {
   }
 
   provisioner "local-exec" {
-    command = "if [ -z \"$(ssh-keygen -F ${aws_eip.ec2.public_ip})\" ]; then ssh-keyscan -H ${aws_eip.ec2.public_ip} >> ~/.ssh/known_hosts fi"
+    command = "if [ -z \"$(ssh-keygen -F ${aws_eip.ec2.public_ip})\" ]; then  ssh-keyscan -H ${aws_eip.ec2.public_ip} >> ~/.ssh/known_hosts; fi"
   }
 }
