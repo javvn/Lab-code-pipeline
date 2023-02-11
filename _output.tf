@@ -73,3 +73,40 @@ output "ec2" {
     public_ip     = module.ec2.public_ip
   }
 }
+
+output "lb" {
+  value = {
+    alb = {
+      arn                        = aws_alb.this.arn
+      id                         = aws_alb.this.id
+      dns_name                   = aws_alb.this.dns_name
+      enable_deletion_protection = aws_alb.this.enable_deletion_protection
+      internal                   = aws_alb.this.internal
+      ip_address_type            = aws_alb.this.ip_address_type
+      name                       = aws_alb.this.name
+      load_balancer_type         = aws_alb.this.load_balancer_type
+      security_group             = aws_alb.this.security_groups
+      subnets                    = aws_alb.this.subnets
+      vpc_id                     = aws_alb.this.vpc_id
+    }
+    target_group = {
+      arn                           = aws_lb_target_group.this.arn
+      id                            = aws_lb_target_group.this.id
+      name                          = aws_lb_target_group.this.name
+      load_balancing_algorithm_type = aws_lb_target_group.this.load_balancing_algorithm_type
+      port                          = aws_lb_target_group.this.port
+      protocal                      = aws_lb_target_group.this.protocol
+    }
+    listener = {
+      arn            = aws_lb_listener.this.arn
+      id             = aws_lb_listener.this.id
+      lb_arn         = aws_lb_listener.this.load_balancer_arn
+      default_action = aws_lb_listener.this.default_action
+    }
+  }
+}
+
+
+output "launch_templete" {
+  value = data.aws_launch_template.default
+}

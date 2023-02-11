@@ -61,6 +61,8 @@ Build code pipeline using terraform in AWS <!-- BEGINNING OF PRE-COMMIT-TERRAFOR
 |------|-------------|
 | <a name="output_deploy_app"></a> [deploy\_app](#output\_deploy\_app) | n/a |
 | <a name="output_ec2"></a> [ec2](#output\_ec2) | n/a |
+| <a name="output_launch_templete"></a> [launch\_templete](#output\_launch\_templete) | n/a |
+| <a name="output_lb"></a> [lb](#output\_lb) | n/a |
 | <a name="output_repo"></a> [repo](#output\_repo) | n/a |
 | <a name="output_security_group"></a> [security\_group](#output\_security\_group) | n/a |
 | <a name="output_vpc"></a> [vpc](#output\_vpc) | n/a |
