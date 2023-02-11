@@ -26,6 +26,7 @@ Build code pipeline using terraform in AWS <!-- BEGINNING OF PRE-COMMIT-TERRAFOR
 
 | Name | Type |
 |------|------|
+| [aws_alb.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb) | resource |
 | [aws_codecommit_repository.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codecommit_repository) | resource |
 | [aws_codedeploy_app.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codedeploy_app) | resource |
 | [aws_codedeploy_deployment_group.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/codedeploy_deployment_group) | resource |
@@ -38,6 +39,10 @@ Build code pipeline using terraform in AWS <!-- BEGINNING OF PRE-COMMIT-TERRAFOR
 | [aws_iam_role_policy.pipeline](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_iam_role_policy_attachment.deploy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_iam_role_policy_attachment.ec2](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_launch_template.ec2](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/launch_template) | resource |
+| [aws_lb_listener.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_listener) | resource |
+| [aws_lb_target_group.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group) | resource |
+| [aws_lb_target_group_attachment.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group_attachment) | resource |
 | [aws_s3_bucket.pipeline](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
 | [aws_s3_bucket_acl.pipeline_acl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_acl) | resource |
 | [null_resource.ec2](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
@@ -45,7 +50,10 @@ Build code pipeline using terraform in AWS <!-- BEGINNING OF PRE-COMMIT-TERRAFOR
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_ec2_control"></a> [ec2\_control](#input\_ec2\_control) | ec2 instance state control | `bool` | `false` | no |
+| <a name="input_ec2_state"></a> [ec2\_state](#input\_ec2\_state) | allows managing an instance power state | `string` | `"stopped"` | no |
 
 ## Outputs
 
