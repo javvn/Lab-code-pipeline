@@ -49,3 +49,15 @@ resource "null_resource" "ec2" {
     command = "if [ -z \"$(ssh-keygen -F ${aws_eip.ec2.public_ip})\" ]; then  ssh-keyscan -H ${aws_eip.ec2.public_ip} >> ~/.ssh/known_hosts; fi"
   }
 }
+
+resource "aws_ami_from_instance" "this" {
+  name               = local.ec2_ami.name
+  source_instance_id = local.ec2_ami.source_instance_id
+  tags               = local.ec2_ami.tags
+
+  depends_on = [module.ec2]
+}
+
+data "aws_launch_template" "default" {
+  name = "test"
+}
